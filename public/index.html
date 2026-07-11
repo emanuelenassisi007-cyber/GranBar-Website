@@ -18,6 +18,15 @@
         justify-content: center;
         width: 330px;
       }
+      .chisiamo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border: 1px solid rgb(218, 210, 210);
+        border-right: none;
+        border-bottom: none;
+        border-left: none;
+      }
       .product .img {
         width: 330px;
         height: 200px;
@@ -128,6 +137,10 @@
           flex-direction: column;
           gap: 15px;
           padding: 15px;
+        }
+
+        .chisiamo {
+          flex-direction: column;
         }
 
         nav {
@@ -314,17 +327,7 @@
         </div>
       </div>
     </div>
-    <div
-      style="
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        border: 1px solid rgb(218, 210, 210);
-        border-right: none;
-        border-bottom: none;
-        border-left: none;
-      "
-    >
+    <div class="chisiamo">
       <img src="barfuori.jpg" width="600px" />
       <div
         style="
