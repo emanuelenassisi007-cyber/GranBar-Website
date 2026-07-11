@@ -81,6 +81,7 @@
         width: 100%;
         gap: 40px;
         flex-direction: column;
+        box-sizing: border-box;
       }
       .contact {
         display: flex;
@@ -89,19 +90,24 @@
         align-items: center;
         padding: 50px;
       }
+      input,
+      textarea {
+        width: 500px; /* scegli tu la misura */
+        max-width: 100%;
+        box-sizing: border-box;
+
+        border: 1px solid rgb(175, 172, 172);
+        margin-top: 10px;
+        margin-bottom: 15px;
+        padding: 5px;
+      }
+
       input {
         height: 35px;
-        border: 1px solid rgb(175, 172, 172);
-        margin-top: 10px;
-        padding: 5px;
-        margin-bottom: 15px;
       }
+
       textarea {
         height: 90px;
-        border: 1px solid rgb(175, 172, 172);
-        margin-top: 10px;
-        padding: 5px;
-        margin-bottom: 15px;
       }
       .social {
         display: flex;
@@ -140,7 +146,34 @@
         }
 
         .chisiamo {
+          width: 100%;
           flex-direction: column;
+          align-items: stretch;
+          overflow: hidden;
+        }
+
+        .chisiamo > img {
+          width: 100%;
+          height: auto;
+          display: block;
+        }
+
+        .chisiamo > div {
+          width: 100%;
+          margin: 0 !important;
+          padding: 25px 20px;
+          box-sizing: border-box;
+          min-width: 0;
+        }
+
+        .chiSiamoText {
+          width: 100% !important;
+        }
+
+        .chiSiamoText .descProduct {
+          width: 100%;
+          display: block;
+          overflow-wrap: break-word;
         }
 
         nav {
@@ -148,6 +181,37 @@
           flex-direction: column;
           align-items: center;
           gap: 10px;
+        }
+        .come {
+          width: 100%;
+          padding: 30px 20px;
+          box-sizing: border-box;
+          overflow: hidden;
+        }
+
+        .come section {
+          width: 100%;
+          box-sizing: border-box;
+        }
+
+        .come .titleProduct {
+          width: 100%;
+          display: block;
+          font-size: 30px !important;
+          text-align: center;
+        }
+
+        .comeText {
+          width: 100% !important;
+          max-width: 100%;
+          box-sizing: border-box;
+        }
+
+        .comeText .descProduct {
+          display: block;
+          width: 100%;
+          text-align: center;
+          overflow-wrap: break-word;
         }
 
         /* Intro */
@@ -187,15 +251,6 @@
         img[src="barfuori.jpg"] {
           width: 100%;
           height: auto;
-        }
-
-        div[style*="border: 1px solid"] {
-          flex-direction: column;
-        }
-
-        div[style*="border: 1px solid"] > div {
-          margin: 20px;
-          text-align: center;
         }
         .contact {
           flex-direction: column;
