@@ -34,6 +34,7 @@ https://emanuelenassisi007-cyber.github.io/GranBar/
 ```
 main/
 │── gallery/
+│── public/
 │── README.md
 │── index.html
 │── granita.html
