@@ -249,6 +249,36 @@ nav a {
   color: #ffffff;
 }
 
+.footer-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+  font-size: 14px;
+}
+
+.footer-links a,
+.footer-links button {
+  color: #d4b47c;
+  text-decoration: none;
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover,
+.footer-links button:hover {
+  color: #ffffff;
+}
+
+.separator {
+  color: rgba(255, 255, 255, 0.4);
+}
+
 /* ==========================================
    VERSIONE RESPONSIVE (MOBILE)
    ========================================== */
