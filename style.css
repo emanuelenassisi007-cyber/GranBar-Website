@@ -22,20 +22,52 @@ body {
 
 .intro {
   display: flex;
-  padding: 200px 0 0 250px;
-  max-width: 700px;
+  padding-left: 250px;
+  width: 100%;
+  max-width: 950px;
   flex-direction: column;
   gap: 20px;
+  color: #ffffff;
+  box-sizing: border-box;
+}
+
+.intro-title {
+  font-size: 42px;
+  font-weight: 500;
+  margin: 0;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.introText {
+  width: 600px;
+  max-width: 90%;
+}
+
+.intro-desc {
+  font-size: 16px;
+  margin: 0;
+  line-height: 1.5;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+.intro-buttons {
+  display: flex;
+  gap: 15px;
 }
 
 .background {
   margin-top: 50px;
-  background-image: url("bar.jpg");
+  background-image:
+    linear-gradient(rgba(97, 96, 96, 0.5), rgba(50, 49, 49, 0.5)),
+    url("bar.jpg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   height: 100vh;
-  width: 100%;
+  width: 100vw;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
 }
 img {
   border-radius: 15px;
@@ -142,7 +174,7 @@ nav a {
   background-color: #68583a;
   border: none;
   cursor: pointer;
-  transition: transform 0.3 ease;
+  transition: transform 0.3s ease;
 }
 
 #button3:hover {
@@ -245,7 +277,19 @@ nav a {
   color: #ddc8a3;
 }
 
-.descProduct {
+.product .descProduct {
+  color: dimgrey;
+}
+
+.chisiamo .descProduct {
+  color: dimgrey;
+}
+
+.come .descProduct {
+  color: dimgrey;
+}
+
+.end .descProduct {
   color: #ffffff;
 }
 
@@ -279,12 +323,10 @@ nav a {
   color: rgba(255, 255, 255, 0.4);
 }
 
-/* ==========================================
-   VERSIONE RESPONSIVE (MOBILE)
-   ========================================== */
 @media (max-width: 768px) {
   body {
     padding-top: 20px;
+    overflow-x: hidden;
   }
 
   .end {
@@ -347,20 +389,53 @@ nav a {
 
   .background {
     width: 100%;
+    min-height: 100svh;
     height: auto;
-    min-height: 100vh;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .intro {
-    padding: 80px 20px;
+    width: 100%;
+    min-width: 0;
+    padding: 70px 20px;
+    box-sizing: border-box;
+
     align-items: center;
     text-align: center;
   }
 
-  #intro {
+  .intro-title {
+    width: 100%;
+    max-width: 100%;
+    font-size: 32px;
+    line-height: 1.2;
+    overflow-wrap: break-word;
+  }
+
+  .introText {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .intro-desc {
+    width: 100%;
+    font-size: 15px;
+    line-height: 1.5;
     text-align: center;
   }
 
+  .intro-buttons {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
   .titleSez {
     justify-content: center;
     text-align: center;
