@@ -17,7 +17,9 @@
 
       .backgroundMenu {
         margin-top: 50px;
-        background-image: url("menu_hero.avif");
+        background-image:
+          linear-gradient(rgba(97, 96, 96, 0.5), rgba(50, 49, 49, 0.5)),
+          url("sfondo-menu.jpg");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -40,6 +42,7 @@
         text-align: center;
         gap: 25px;
         color: white;
+
         opacity: 0;
         transform: translateY(40px);
         animation: fadeUp 1s ease-out forwards;
@@ -57,17 +60,63 @@
         }
       }
 
-      #intro:first-child {
+      .intro-title {
         font-size: 58px;
         font-weight: bold;
+        line-height: 1.2;
+        margin: 0;
+        color: white;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
       }
 
-      #intro:last-of-type {
+      .intro-desc {
+        max-width: 750px;
         font-size: 20px;
-        line-height: 1.6;
+        line-height: 1.7;
+        margin: 0;
+        color: white;
+        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
       }
 
-      #button1,
+      .intro-buttons {
+        display: flex;
+        gap: 15px;
+      }
+
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(40px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      #button1 {
+        width: 220px;
+        height: 55px;
+        margin: auto;
+        border: none;
+        border-radius: 40px;
+        background: #f5c542;
+        color: #333;
+        font-size: 17px;
+        font-weight: normal;
+        cursor: pointer;
+        transition:
+          background-color 0.3s ease,
+          transform 0.3s ease;
+      }
+
+      #button1:hover,
+      #button3:hover {
+        background: #e9b400;
+        transform: scale(1.02);
+      }
+
       #button3 {
         width: 220px;
         height: 55px;
@@ -83,11 +132,6 @@
         font-weight: bold;
 
         cursor: pointer;
-      }
-
-      #button1:hover,
-      #button3:hover {
-        background: #e6b200;
       }
 
       .box {
@@ -144,23 +188,15 @@
 
       .product {
         flex: 1;
-
         background: white;
-
         padding: 30px;
-
         border-radius: 18px;
-
         display: flex;
-
+        width: 300px;
         flex-direction: column;
-
         align-items: center;
-
         text-align: center;
-
         gap: 18px;
-
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
       }
 
@@ -171,32 +207,23 @@
       .img {
         width: 220px;
         height: 220px;
-
         overflow: hidden;
-
         border-radius: 18px;
       }
 
       .img img {
         width: 100%;
         height: 100%;
-
         object-fit: cover;
       }
 
       .come {
         padding: 80px 8%;
-
         background: #fff8e8;
-
         display: flex;
-
         flex-direction: column;
-
         align-items: center;
-
         text-align: center;
-
         gap: 25px;
       }
 
@@ -211,6 +238,7 @@
       @media (max-width: 768px) {
         .backgroundMenu {
           min-height: 100vh;
+          height: auto;
           padding: 40px 20px;
         }
 
@@ -218,16 +246,29 @@
           margin: 0;
           padding: 0 20px;
           width: 100%;
-          text-align: center;
           gap: 20px;
         }
 
-        #intro:first-child {
+        .intro-title {
           font-size: 38px;
         }
 
-        #intro:last-of-type {
+        .intro-desc {
+          max-width: 100%;
           font-size: 16px;
+          line-height: 1.7;
+        }
+
+        .intro-buttons {
+          width: 100%;
+
+          flex-direction: column;
+          align-items: center;
+        }
+
+        #button1 {
+          width: 220px;
+          max-width: 90%;
         }
 
         .box {
@@ -306,12 +347,12 @@
     </div>
     <section class="backgroundMenu">
       <div class="intro">
-        <span id="intro"> Il nostro Menù </span>
+        <h1 class="intro-title">Il nostro Menù</h1>
 
-        <span id="intro">
+        <p class="intro-desc">
           Dal caffè del mattino all'aperitivo della sera, scopri tutte le
           specialità preparate ogni giorno con ingredienti selezionati.
-        </span>
+        </p>
 
         <button id="button1">Vieni a trovarci</button>
       </div>
@@ -457,12 +498,12 @@
           <div class="immagine">
             <img src="coppa.jpg" />
           </div>
-          <span class="titleProduct"> Coppette </span>
+          <span class="titleProduct"> Coppe </span>
         </div>
 
         <div class="product">
           <div class="immagine">
-            <img src="gusti.webp" />
+            <img src="gusti.png" />
           </div>
           <span class="titleProduct"> Tanti Gusti </span>
         </div>
@@ -523,14 +564,6 @@
           </div>
 
           <span class="titleProduct"> Vini </span>
-        </div>
-
-        <div class="product">
-          <div class="img">
-            <img src="analcolici.jpg" />
-          </div>
-
-          <span class="titleProduct"> Analcolici </span>
         </div>
       </div>
     </section>

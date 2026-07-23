@@ -60,12 +60,12 @@
         }
       }
 
-      #intro:first-child {
+      .intro-title {
         font-size: 58px;
         font-weight: bold;
       }
 
-      #intro:last-of-type {
+      .intro-desc {
         font-size: 20px;
         line-height: 1.7;
       }
@@ -153,6 +153,11 @@
         object-fit: cover;
       }
 
+      .immagine video {
+        max-width: 100%;
+        object-fit: contain;
+      }
+
       .immagine {
         display: flex;
         width: 100%;
@@ -194,11 +199,11 @@
           gap: 20px;
         }
 
-        #intro:first-child {
+        .intro-title {
           font-size: 38px;
         }
 
-        #intro:last-of-type {
+        .intro-desc {
           font-size: 16px;
         }
 
@@ -256,14 +261,17 @@
         }
       }
     </style>
+
     <title>GranBar</title>
   </head>
+
   <body>
     <div class="start">
       <div class="row">
-        <img src="logo.png" alt="" width="100" />
+        <img src="logo.png" alt="Logo GranBar" width="100" />
         <span class="title">GranBar Di Stefano</span>
       </div>
+
       <nav>
         <a href="index.html">Home</a>
         <a href="bar.html">Il GranBar</a>
@@ -272,11 +280,12 @@
         <a href="gallery.html">Gallery</a>
       </nav>
     </div>
+
     <section class="backgroundGranita">
       <div class="intro">
-        <span id="intro"> La nostra Granita al Limone </span>
+        <span class="intro-title"> La nostra Granita al Limone </span>
 
-        <span id="intro">
+        <span class="intro-desc">
           Fresca, genuina e preparata ogni giorno con ingredienti selezionati.
           Una ricetta che da oltre sessant'anni accompagna le estati dei nostri
           clienti.
@@ -343,7 +352,7 @@
 
         <div class="product">
           <div class="immagine">
-            <img src="ricetta.jpeg" />
+            <video src="granita.mp4" autoplay muted loop></video>
           </div>
 
           <span class="titleProduct"> 2. Preparazione </span>
@@ -355,7 +364,7 @@
 
         <div class="product">
           <div class="immagine">
-            <img src="granitaSez.jpg" />
+            <img src="granita.jpeg" />
           </div>
 
           <span class="titleProduct"> 3. Freschezza </span>
