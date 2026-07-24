@@ -19,8 +19,9 @@
 
       .gallery-img {
         width: 100%;
-        height: auto;
+        height: 100%;
         object-fit: cover;
+
         border-radius: 10px;
         display: block;
         transition: transform 0.2s ease;
@@ -178,7 +179,7 @@
   </body>
   <script>
     const gallery = document.querySelector(".gallery");
-    const totale = 118;
+    const totale = 117;
     for (let i = 1; i <= totale; i++) {
       const img = document.createElement("img");
       img.src = `gallery/img${i}.jpg`;

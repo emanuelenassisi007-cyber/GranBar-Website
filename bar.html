@@ -29,7 +29,7 @@
       }
       .backgroundBar {
         margin-top: 50px;
-        background-image: url("bar.jpg");
+        background-image: url("bar2.jpg");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -172,15 +172,19 @@
         gap: 20px;
         flex: 1;
         min-width: 230px;
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease;
       }
 
       .product:hover {
         transform: scale(1.04);
+        box-shadow: 0 10px 30px #ddc8a3;
       }
 
       .valori {
         transform: translateY(0);
-        transition: transform ease-out;
+        transition: transform 0.3s ease-out;
       }
 
       .valori:hover {
@@ -280,9 +284,8 @@
         <span class="titolo"> Il GranBar dal 1959 </span>
 
         <span class="testo" style="font-size: 18px">
-          Da oltre sessant'anni accogliamo ogni cliente con la stessa passione,
-          offrendo prodotti artigianali preparati con ingredienti selezionati e
-          il calore della tradizione salentina.
+          Da oltre sessant'anni accompagniamo le vostre giornate con granite
+          artigianali, caffè e prodotti preparati con cura.
         </span>
 
         <button id="button1">Scopri la nostra storia</button>
@@ -301,24 +304,22 @@
           gap: 80px;
         "
       >
-        <img src="storiaBar.jpg" width="1500" />
+        <img src="storiaBar.jpg" width="350" />
 
         <div style="display: flex; flex-direction: column; gap: 25px">
           <span class="titleProduct"> Una tradizione di famiglia </span>
 
           <span class="descProduct">
-            Il GranBar nasce nel 1959 grazie alla passione della famiglia
-            Stefano. Da allora continuiamo ogni giorno a preparare granite,
-            caffè, dolci e prodotti artigianali seguendo le ricette che ci hanno
-            reso un punto di riferimento per il territorio.
+            Dal 1959 GranBar è un punto di riferimento per chi cerca una buona
+            granita, un caffè e un ambiente accogliente. Da generazioni portiamo
+            avanti la stessa attenzione per la qualità e il servizio, mantenendo
+            vive le tradizioni che ci accompagnano da sempre.
           </span>
 
           <button id="button3">Guarda il menù</button>
         </div>
       </div>
     </div>
-
-    <!-- VALORI -->
 
     <div class="come">
       <span class="titleProduct" style="font-size: 38px">
@@ -369,8 +370,6 @@
       </div>
     </div>
 
-    <!-- LOCALE -->
-
     <div class="box">
       <div
         style="
@@ -395,8 +394,6 @@
         <img src="interno.jpg" width="550" />
       </div>
     </div>
-
-    <!-- NUMERI -->
 
     <div class="come">
       <span class="titleProduct" style="font-size: 38px">
@@ -431,43 +428,81 @@
       </div>
     </div>
 
-    <!-- PERCHE' -->
-
     <div class="box">
       <span class="titleSez"> Perché scegliere il GranBar </span>
 
       <div style="display: flex; gap: 30px; flex-wrap: wrap; margin-top: 45px">
         <div class="product">
-          <span class="titleProduct"> 🍋 Ingredienti freschi </span>
+          <span class="titleProduct"> Ingredienti selezionati </span>
 
           <span class="descProduct">
-            Selezioniamo materie prime di alta qualità.
+            Utilizziamo materie prime fresche e di qualità.
           </span>
         </div>
 
         <div class="product">
-          <span class="titleProduct"> ☕ Esperienza </span>
+          <span class="titleProduct">Tradizione dal 1959 </span>
 
-          <span class="descProduct"> Oltre sessant'anni di attività. </span>
+          <span class="descProduct"> Oltre sessant'anni di esperienza. </span>
         </div>
 
         <div class="product">
-          <span class="titleProduct"> ❤️ Passione </span>
+          <span class="titleProduct"> Granite artigianali </span>
 
           <span class="descProduct">
-            Prepariamo ogni prodotto con la massima cura.
+            Preparate seguendo ricette tramandate nel tempo.
           </span>
         </div>
 
         <div class="product">
-          <span class="titleProduct"> 😊 Accoglienza </span>
+          <span class="titleProduct"> Servizio cordiale </span>
 
-          <span class="descProduct"> Ci piace far sentire tutti a casa. </span>
+          <span class="descProduct">
+            Ti accogliamo con il sorriso, ogni giorno.
+          </span>
         </div>
       </div>
     </div>
 
-    <!-- CTA -->
+    <div class="recensioni">
+      <span class="titleSez">Cosa dicono i nostri clienti</span>
+
+      <div class="reviews-container">
+        <div class="review">
+          <div class="stars">★★★★★</div>
+          <p>
+            Interni moderni ed eleganti, si affaccia immediatamente sul centro
+            del paese. Ottime le colazioni, così come i dolci di produzione
+            propria. Ottimi i gelati ed anche le torte. Un bar che è storia del
+            paese ma anche garanzia.
+          </p>
+          <span class="author">— Francesco P.</span>
+        </div>
+
+        <div class="review">
+          <div class="stars">★★★★★</div>
+          <p>
+            Il proprietari gentile come nessuno, dolci artigianali veramente
+            BUONISSIMI, caffè ottimo prezzi giustissimi; quando lo si conosce
+            questo bar non si può fare a meno di ritornare! Consigliatissimo!!!
+          </p>
+          <span class="author">— Vincenzo P.</span>
+        </div>
+
+        <div class="review">
+          <div class="stars">★★★★★</div>
+          <p>
+            Un locale Nuovo appena entri ti dà subito un senso di pulizia e
+            ordine ed eleganza gli operatori sono cortesi quindi un bel locale
+            che appena finisce la pandemia va bene x andare a consumare una
+            colazione o un aperitivo.
+          </p>
+          <span class="author">— Antonio C.</span>
+        </div>
+      </div>
+
+      <button id="googleReviews">Leggi tutte le recensioni su Google</button>
+    </div>
 
     <div class="come">
       <span class="titleProduct" style="font-size: 40px">
@@ -608,6 +643,12 @@
       .getElementById("button4")
       .addEventListener("click", () => {
         window.location.href = "gallery.html";
+      });
+    const googleReviews = document
+      .getElementById("googleReviews")
+      .addEventListener("click", () => {
+        window.location.href =
+          "https://www.google.com/search?sa=X&hl=it-IT&sca_esv=fd7ebb06f35fc00e&sxsrf=APpeQntMLJwh2kpPbhaCmPOLqZ2LIQcwgA:1784908690260&q=Gran+Bar+Recensioni&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxK2NDGzNDE1MLS0MDI2NTc3NTU028DI-IpR2L0oMU_BKbFIISg1OTWvODM_L3MRKzZRALU6f3ZGAAAA&rldimm=9469450198235775516&tbm=lcl&ved=2ahUKEwji0cGD1-uVAxWth_0HHS0MIBAQ9fQKegQIRBAG&cshid=1784908697952465&biw=1536&bih=730&dpr=1.25#lkt=LocalPoiReviews";
       });
   </script>
 </html>
