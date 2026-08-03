@@ -846,6 +846,16 @@
         menuButton.setAttribute("aria-expanded", "false");
       });
     });
+    document.addEventListener("click", (event) => {
+      if (
+        navMenu.classList.contains("open") &&
+        !navMenu.contains(event.target) &&
+        !menuButton.contains(event.target)
+      ) {
+        navMenu.classList.remove("open");
+        menuButton.setAttribute("aria-expanded", "false");
+      }
+    });
   </script>
   <script>
     const scopri = document
