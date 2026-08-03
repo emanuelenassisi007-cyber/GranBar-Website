@@ -78,15 +78,30 @@ img {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-color: white;
+}
+
+.topbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  font-size: 45px;
+  color: #dfc69c;
+  margin-left: 20px;
 }
 
 nav {
   display: flex;
   align-items: center;
   gap: 65px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
   background-color: white;
   padding: 15px 0;
 }
@@ -95,20 +110,102 @@ nav a {
   font-size: 13px;
   color: black;
   text-decoration: none;
+  padding: 10px 12px;
+  border-radius: 5px;
+}
+
+nav a:hover,
+nav a#select {
+  background-color: #dfc69c;
+}
+
+.menu-button {
+  display: none;
+  width: 42px;
+  height: 42px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 6px;
+}
+
+.menu-button span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #333;
+  margin: 6px 0;
+  border-radius: 3px;
+  transition: 0.3s;
 }
 
 @media (max-width: 768px) {
+  .start {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    align-items: stretch;
+  }
+
+  .topbar {
+    width: 100%;
+    height: 70px;
+    padding: 8px 18px;
+    justify-content: space-between;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  }
+
+  .row img {
+    width: 50px;
+  }
+
+  .title {
+    font-size: 20px;
+    margin-left: 10px;
+  }
+
+  .menu-button {
+    display: block;
+  }
+
   nav {
-    display: flex;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
     flex-direction: column;
-    align-items: start;
-    gap: 10px;
+    align-items: stretch;
+    gap: 0;
+    padding: 0;
+    background-color: white;
+
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.12);
+  }
+
+  nav.open {
+    max-height: 400px;
+  }
+
+  nav a {
+    width: 100%;
+    font-size: 17px;
+    padding: 16px 22px;
+    border-radius: 0;
+    border-bottom: 1px solid #eeeeee;
   }
 
   nav a::before {
-    content: "•";
-    margin-right: 8px;
-    color: #c2964b;
+    content: none;
+  }
+
+  body {
+    padding-top: 70px;
   }
 }
 

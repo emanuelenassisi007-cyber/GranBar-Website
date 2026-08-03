@@ -383,11 +383,25 @@
   </head>
   <body>
     <div class="start">
-      <div class="row">
-        <img src="logo.png" alt="" width="100" />
-        <span class="title">GranBar Di Stefano</span>
+      <div class="topbar">
+        <div class="row">
+          <img src="logo.png" alt="Logo GranBar" width="100" />
+          <span class="title">GranBar Di Stefano</span>
+        </div>
+
+        <button
+          class="menu-button"
+          id="menuButton"
+          aria-label="Apri il menu"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
-      <nav>
+
+      <nav id="navMenu">
         <a href="index.html" id="select">Home</a>
         <a href="bar.html">Il GranBar</a>
         <a href="granita.html">La Nostra Granita</a>
@@ -698,6 +712,26 @@
       </div>
     </footer>
   </body>
+  <script>
+    const menuButton = document.getElementById("menuButton");
+    const navMenu = document.getElementById("navMenu");
+
+    menuButton.addEventListener("click", () => {
+      navMenu.classList.toggle("open");
+
+      const menuAperto = navMenu.classList.contains("open");
+      menuButton.setAttribute("aria-expanded", menuAperto);
+    });
+
+    const navLinks = document.querySelectorAll("#navMenu a");
+
+    navLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        navMenu.classList.remove("open");
+        menuButton.setAttribute("aria-expanded", "false");
+      });
+    });
+  </script>
   <script>
     const scopri = document
       .getElementById("scopri")
